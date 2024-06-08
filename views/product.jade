@@ -1,0 +1,203 @@
+doctype jade
+jade(lang='en')
+  head
+    meta(charset='utf-8')
+    title MVerduras - M Verduras Shop 
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    meta(content='Free jade Templates', name='keywords')
+    meta(content='Free jade Templates', name='description')
+    // Favicon
+    link(href='img/carousel-1.jpg', rel='icon')
+    // Google Web Fonts
+    link(rel='preconnect', href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap', rel='stylesheet')
+    // Font Awesome
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css', rel='stylesheet')
+    // Libraries Stylesheet
+    link(href='lib/owlcarousel/assets/owl.carousel.min.css', rel='stylesheet')
+    link(href='lib/lightbox/css/lightbox.min.css', rel='stylesheet')
+    // Customized Bootstrap Stylesheet
+    link(href='css/style2.css', rel='stylesheet')
+  body
+    // Topbar Start
+    .container-fluid.bg-primary.py-3.d-none.d-md-block
+      .container
+        .row
+          .col-md-6.text-center.text-lg-left.mb-2.mb-lg-0
+            .d-inline-flex.align-items-center
+              a.text-white.pr-3(href='') FAQs
+              span.text-white |
+              a.text-white.px-3(href='') Help
+              span.text-white |
+              a.text-white.pl-3(href='') Support
+          .col-md-6.text-center.text-lg-right
+            .d-inline-flex.align-items-center
+              a.text-white.px-3(href='')
+                i.fab.fa-facebook-f
+              a.text-white.px-3(href='')
+                i.fab.fa-twitter
+              a.text-white.px-3(href='')
+                i.fab.fa-linkedin-in
+              a.text-white.px-3(href='')
+                i.fab.fa-instagram
+              a.text-white.pl-3(href='')
+                i.fab.fa-youtube
+    // Topbar End
+    // Navbar Start
+    .container-fluid.position-relative.nav-bar.p-0
+      .container-lg.position-relative.p-0.px-lg-3(style='z-index: 9;')
+        nav.navbar.navbar-expand-lg.bg-white.navbar-light.shadow.p-lg-0
+          a.navbar-brand.d-block.d-lg-none(href='index.jade')
+            h1.m-0.display-4.text-primary
+              span.text-secondary Malave
+              | Verduras
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse')
+            span.navbar-toggler-icon
+          #navbarCollapse.collapse.navbar-collapse.justify-content-between
+            .navbar-nav.ml-auto.py-0
+              a.nav-item.nav-link(href='/') Home
+              a.nav-item.nav-link(href='/') About
+              a.nav-item.nav-link.active(href='/product') Productos
+            a.navbar-brand.mx-5.d-none.d-lg-block(href='/')
+              h1.m-0.display-4.text-primary
+                span.text-secondary Malave
+                | Verduras
+            .navbar-nav.mr-auto.py-0
+              a.nav-item.nav-link(href='/') Gallery
+              a.nav-item.nav-link(href='/') Contact
+    // Navbar End
+    // Header Start
+    .jumbotron.jumbotron-fluid.page-header(style='margin-bottom: 90px;')
+      .container.text-center.py-5
+        h1.text-white.display-3.mt-lg-5 Productos
+        .d-inline-flex.align-items-center.text-white
+          p.m-0
+            a.text-white(href='/') Home
+          i.fa.fa-circle.px-3
+          p.m-0 Productos
+    // Header End
+    // Products Start
+    .container-fluid.py-5
+      .container.py-5
+        .row.justify-content-center
+          .col-lg-6
+            h1.section-title.position-relative.text-center.mb-5 Los mejores precios en verdura y frutas
+        .row
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $6
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/pera.jpg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 Pera
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $5,5
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/manzana.jpeg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 Manzana
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $1,5
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/cambur.jpg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 Cambur
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $8
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/durazno.jpeg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 Durazno
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $5
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/yuka.jpg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 yuka
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $2
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/ñame.jpeg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 Ñame
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $4
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/tomate.jpeg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 Tomate
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-lg-3.col-md-6.mb-4.pb-2
+            .product-item.d-flex.flex-column.align-items-center.text-center.bg-light.rounded.py-5.px-3
+              .bg-primary.mt-n5.py-3(style='width: 80px;')
+                h4.font-weight-bold.text-white.mb-0 $99
+              .position-relative.bg-primary.rounded-circle.mt-n3.mb-4.p-3(style='width: 150px; height: 150px;')
+                img.rounded-circle.w-100.h-100(src='img/calabaza.jpg', style='object-fit: cover;')
+              h5.font-weight-bold.mb-4 Auyama
+              a.btn.btn-sm.btn-secondary(href='') Order Now
+          .col-12.text-center
+            a.btn.btn-primary.py-3.px-5(href='') Load More
+    // Products End
+    // Footer Start
+    .container-fluid.footer.bg-light.py-5(style='margin-top: 90px;')
+      .container.text-center.py-5
+        .row
+          .col-12.mb-4
+            a.navbar-brand.m-0(href='index.jade')
+              h1.m-0.mt-n2.display-4.text-primary
+                span.text-secondary M
+                | Verduras
+          .col-12.mb-4
+            a.btn.btn-outline-secondary.btn-social.mr-2(href='#')
+              i.fab.fa-twitter
+            a.btn.btn-outline-secondary.btn-social.mr-2(href='#')
+              i.fab.fa-facebook-f
+            a.btn.btn-outline-secondary.btn-social.mr-2(href='#')
+              i.fab.fa-linkedin-in
+            a.btn.btn-outline-secondary.btn-social(href='#')
+              i.fab.fa-instagram
+          .col-12.mt-2.mb-4
+            .row
+              .col-sm-6.text-center.text-sm-right.border-right.mb-3.mb-sm-0
+                h5.font-weight-bold.mb-2 Get In Touch
+                p.mb-2 123 Street, New York, USA
+                p.mb-0 +012 345 67890
+              .col-sm-6.text-center.text-sm-left
+                h5.font-weight-bold.mb-2 Opening Hours
+                p.mb-2 Mon &ndash; Sat, 8AM &ndash; 5PM
+                p.mb-0 Sunday: Closed
+          .col-12
+            p.m-0
+              | &copy; 
+              a(href='#') Domain
+              | . All Rights Reserved. Designed by 
+              a(href='https://jadecodex.com') jade Codex
+    // Footer End
+    // Back to Top
+    a.btn.btn-secondary.px-2.back-to-top(href='#')
+      i.fa.fa-angle-double-up
+    // JavaScript Libraries
+    script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js')
+    script(src='lib/easing/easing.min.js')
+    script(src='lib/waypoints/waypoints.min.js')
+    script(src='lib/owlcarousel/owl.carousel.min.js')
+    script(src='lib/isotope/isotope.pkgd.min.js')
+    script(src='lib/lightbox/js/lightbox.min.js')
+    // Contact Javascript File
+    script(src='mail/jqBootstrapValidation.min.js')
+    script(src='mail/contact.js')
+    // Template Javascript
+    script(src='js/main.js')
