@@ -3,28 +3,44 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var loginRouter = require('./routes/login');
+const session = require('express-session');
+const flash = require('express-flash');
+const bodyParser = require('body-parser');
+
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const clientRouter = require('./routes/client_routes');
+const db = require('./models/db')
 
+ 
 var app = express();
 
 // view engine setup
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('uploads'));
 
-app.use('/', indexRouter);
+
+
+app.use ('/index', indexRouter)
+app.use('/login', loginRouter);
 app.use('/users', usersRouter);
-app.get('/product', (req, res) => {
-  // Lógica para renderizar la vista "gallery.jade"
-  res.render('product');
-});
+app.use('/', clientRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -41,5 +57,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.use(session({
+  secret: 'Samuel',
+  resave: false,
+  saveUninitialized: false,
+}));
+
+app.use(flash());
 
 module.exports = app;

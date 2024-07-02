@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-    color: #e84118;
+    color: #7d8b2c;
 }
 
 .form-group {
@@ -28,12 +28,12 @@ h2 {
 
 .form-control:focus {
     background-color: #3a3e42;
-    border: 1px solid #e84118;
+    border: 1px solid #7d8b2c;
     color: #FFF;
 }
 
 .btn {
-    background-color: #e84118;
+    background-color: #677421;
     border: none;
     color: #FFF;
     cursor: pointer;
@@ -49,5 +49,5 @@ h2 {
 
 .btn:hover {
     background-color: #FFF;
-    color: #e84118;
+    color: #7d8b2c;
 }
